@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 17:26:20 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/14 18:08:33 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/14 18:29:59 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/14 18:31:23 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+void ft_bzero(void *s, size_t n)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-    char c;
-
-    c = 'Q';
-    printf("Result when a printable character %c is passed to isprint(): %d"
-    , c, ft_isprint(c));
-
-    c = '\n';
-    printf("\nResult when a control character %c is passed to isprint(): %d"
-    , c, ft_isprint(c));
-
-    return 0;
-}*/

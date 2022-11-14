@@ -5,10 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 17:33:58 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/06 18:22:22 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/14 18:25:48 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/14 18:26:23 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//
-size_t ft_strlen (const char *s)
+#include 
+
+size_t	strlen(const char *s)
+{
+	int	size;
+
+	size = 0;
+	while (s != '\0')
+	{
+		size++;
+	}
+	return (size);
+}

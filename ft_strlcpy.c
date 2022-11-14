@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 17:26:20 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/14 18:08:33 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/14 18:34:58 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/14 19:00:12 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+size_t	strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	while(str(src) != '\0')
+	{
+		
+	}
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-    char c;
-
-    c = 'Q';
-    printf("Result when a printable character %c is passed to isprint(): %d"
-    , c, ft_isprint(c));
-
-    c = '\n';
-    printf("\nResult when a control character %c is passed to isprint(): %d"
-    , c, ft_isprint(c));
-
-    return 0;
-}*/
