@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 20:16:18 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/26 20:21:45 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/26 20:10:49 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/26 20:13:53 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Overwrites the bytes of a string (*s) to zeroes bytes, depending on the
-** value of the variable n. If the variable n is zero (0), then nothing
-** will happen.
+** Writes len bytes of value c (converted to an unsigned char) to the string b.
 */
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = 0;
+		((char *)s)[i] = c;
 		i++;
 	}
+	return (s);
 }
 
-/*void	ft_bzero(void *s, size_t n)
+/*void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t		i;
+	unsigned char *ub;
 
-	i = 0;
-	while (n--)
-		((unsigned char *)s)[i++] = 0;
+	ub = (unsigned char *)b;
+	while (len--)
+		*ub++ = (unsigned char)c;
+	return (b);
 }*/

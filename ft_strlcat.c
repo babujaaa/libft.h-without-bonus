@@ -6,7 +6,7 @@
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 15:52:05 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/26 17:35:03 by mrolhas-         ###   ########.fr       */
+/*   Updated: 2022/11/26 19:22:38 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[src_len + cur] = 0;
 	return (ft_strlen(src) + src_len);
 }
-

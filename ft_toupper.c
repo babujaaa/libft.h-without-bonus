@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 20:16:18 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/26 20:21:45 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/26 17:57:24 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/26 18:04:28 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Overwrites the bytes of a string (*s) to zeroes bytes, depending on the
-** value of the variable n. If the variable n is zero (0), then nothing
-** will happen.
+** Transforma letras minusculas em maiusculas.
 */
 
-void	ft_bzero(void *s, size_t n)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = 0;
-		i++;
-	}
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
 }
 
-/*void	ft_bzero(void *s, size_t n)
+/*int	ft_toupper(int c)
 {
-	size_t		i;
-
-	i = 0;
-	while (n--)
-		((unsigned char *)s)[i++] = 0;
+	return ((c >= 'a' && c <= 'z') ? c - 32 : c);
+	**Solucao da net
+	**If Condition is true ? then value X : otherwise value Y
 }*/

@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 20:16:18 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/26 20:21:45 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/26 19:40:09 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/26 19:48:03 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Overwrites the bytes of a string (*s) to zeroes bytes, depending on the
-** value of the variable n. If the variable n is zero (0), then nothing
-** will happen.
-*/
-
-void	ft_bzero(void *s, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
+	int	i;
+	int	j;
 
 	i = 0;
-	while (i < n)
+	j = 0;
+	while (big[i] && little[j] && len > 0)
 	{
-		((unsigned char *)s)[i] = 0;
-		i++;
+		j = 0;
+		if (little[j] != big[i])
+		{
+			i++;
+			len--;
+		}
+		while (little[j] == big[i] && len > 0 && big[i])
+		{
+			j++;
+			i++;
+			len--;
+		}
 	}
+	if (little[j] == '\0')
+		return ((char *)big + (i - j));
+	return (NULL);
 }
-
-/*void	ft_bzero(void *s, size_t n)
-{
-	size_t		i;
-
-	i = 0;
-	while (n--)
-		((unsigned char *)s)[i++] = 0;
-}*/

@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 20:16:18 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/26 20:21:45 by mrolhas-         ###   ########.fr       */
+/*   Created: 2022/11/26 19:49:47 by mrolhas-          #+#    #+#             */
+/*   Updated: 2022/11/26 20:08:23 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Overwrites the bytes of a string (*s) to zeroes bytes, depending on the
-** value of the variable n. If the variable n is zero (0), then nothing
-** will happen.
+** Converts the initial portion of a string pointed to the variable string, to
+** an int representarion (type).
 */
 
-void	ft_bzero(void *s, size_t n)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
+	int	i;
+	int	nb;
+	int	sinal;
 
 	i = 0;
-	while (i < n)
+	nb = 0;
+	sinal = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	while ((str[i] == '-') || (str[i] == '+'))
 	{
-		((unsigned char *)s)[i] = 0;
+		if (str[i] == '-')
+			sinal *= -1;
 		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = (nb * 10) + (str[i] - 48);
+		i++;
+	}
+	return (nb * sinal);
 }
-
-/*void	ft_bzero(void *s, size_t n)
-{
-	size_t		i;
-
-	i = 0;
-	while (n--)
-		((unsigned char *)s)[i++] = 0;
-}*/
