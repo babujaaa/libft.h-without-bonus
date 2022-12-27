@@ -6,7 +6,7 @@
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:49:59 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/12/26 13:29:34 by mrolhas-         ###   ########.fr       */
+/*   Updated: 2022/12/27 19:38:17 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** Applies the function f to each character of the string passed as argument
 ** by giving its index as first argument to create a “fresh” new string
-** resulting from the suc- cessive applications of f.
+** resulting from the successive applications of f.
 */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
