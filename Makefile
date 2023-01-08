@@ -6,7 +6,7 @@
 #    By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/26 16:06:33 by mrolhas-          #+#    #+#              #
-#    Updated: 2022/11/26 16:31:05 by mrolhas-         ###   ########.fr        #
+#    Updated: 2023/01/07 22:30:57 by mrolhas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,17 +44,8 @@ SRCS		= ft_atoi.c \
 			  ft_substr.c \
 			  ft_tolower.c \
 			  ft_toupper.c
-SRCS_BONUS	= ft_lstadd_back.c \
-			  ft_lstadd_front.c \
-			  ft_lstclear.c \
-			  ft_lstdelone.c \
-			  ft_lstiter.c \
-			  ft_lstlast.c \
-			  ft_lstmap.c \
-			  ft_lstnew.c \
-			  ft_lstsize.c
+
 OBJS		= ${SRCS:.c=.o}
-OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 NAME		= libft.a
 CC			= gcc -Wall -Wextra -Werror
 
@@ -66,15 +57,12 @@ all:		${NAME}
 $(NAME):	${OBJS} libft.h
 			ar rcs ${NAME} ${OBJS}
 
-bonus:		${OBJS_BONUS} libft.h
-			ar rcs ${NAME} ${OBJS_BONUS}
-
 clean:
-			rm -f ${OBJS} ${OBJS_BONUS}
+			rm -f ${OBJS}
 
 fclean:		clean
 			rm -f ${NAME}
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re

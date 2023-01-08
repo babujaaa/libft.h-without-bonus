@@ -6,7 +6,7 @@
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 19:01:46 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/11/26 19:22:08 by mrolhas-         ###   ########.fr       */
+/*   Updated: 2023/01/07 19:30:11 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 /*
 ** Procura a ultima local. de c (convertida a char e ptr) na string apontada
-** por s.  O null character no fim e considerada parte da string, como tal, 
+** por s.  O null character no fim e considerada parte da string, como tal,
 ** se c for `\0', a funcao encontra `\0'.
 */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	char	chr;
+	int		i;
 
+	chr = c;
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == chr)
 			return ((char *)s + i);
 		i--;
 	}

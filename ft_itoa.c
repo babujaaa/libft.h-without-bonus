@@ -6,7 +6,7 @@
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:49:22 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/12/26 13:21:39 by mrolhas-         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:15:20 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 ** Takes an int, and converts it to a null-terminated string.
 */
 
-static int	number_digit(int nn)
+static unsigned int	number_digit(int nn)
 {
-	int	c;
+	unsigned int	c;
 
 	c = 0;
 	if (nn == 0)
@@ -35,9 +35,9 @@ static int	number_digit(int nn)
 
 char	*ft_itoa(int n)
 {
-	char			*str;
-	int				size;
-	long int		nb;
+	char		*str;
+	int			size;
+	long int	nb;
 
 	nb = n;
 	size = number_digit(nb);
@@ -62,7 +62,7 @@ char	*ft_itoa(int n)
 }
 
 /*
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	i;
 	size_t	n_size;

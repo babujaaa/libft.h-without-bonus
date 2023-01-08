@@ -6,7 +6,7 @@
 /*   By: mrolhas- <mrolhas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 19:53:07 by mrolhas-          #+#    #+#             */
-/*   Updated: 2022/12/27 19:56:00 by mrolhas-         ###   ########.fr       */
+/*   Updated: 2023/01/07 22:00:39 by mrolhas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i])
-		write(fd, &s[i++], 1);
+	if (s)
+		write(fd, s, ft_strlen(s));
 }
 
-/*int		ft_putstr_fd(char const *s, int fd)
+/*
+int		ft_putstr_fd(char const *s, int fd)
 {
 	int		i;
 	int		ret;
